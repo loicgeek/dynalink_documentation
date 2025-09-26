@@ -1,7 +1,7 @@
 ---
 seo:
-  title: Nuxt Docs Template
-  description: Create stunning, fast and SEO-optimized documentation sites with Nuxt UI.
+  title: DynaLink - Superior Dynamic Links
+  description: Enterprise-grade dynamic links with advanced analytics, security, and seamless integration. Better than Firebase Dynamic Links.
 ---
 
 ::u-page-hero{class="dark:bg-gradient-to-b from-neutral-900 to-neutral-950"}
@@ -12,10 +12,10 @@ orientation: horizontal
 :hero-background
 
 #title
-Ship Beautiful [Documentation]{.text-primary}.
+Build Powerful [Dynamic Links]{.text-primary}.
 
 #description
-Build professional documentation with Nuxt UI's powerful components, enhanced typography, and seamless Nuxt Content integration. The same system trusted by the entire [Nuxt ecosystem](https://nuxt.com).
+Create enterprise-grade dynamic links with advanced analytics, enhanced security, and seamless integration capabilities. The superior alternative to Firebase Dynamic Links trusted by [thousands of developers](https://dynalink.app).
 
 #links
   :::u-button
@@ -29,51 +29,54 @@ Build professional documentation with Nuxt UI's powerful components, enhanced ty
 
   :::u-button
   ---
-  icon: i-simple-icons-github
+  icon: i-lucide-github
   color: neutral
   variant: outline
   size: xl
-  to: https://github.com/nuxt-ui-templates/docs
-  target: _blank
+  to: /getting-started/installation
   ---
-  Use this template
+  View API Docs
   :::
 
 #default
   :::prose-pre
   ---
   code: |
-    export default defineNuxtConfig({
-      modules: [
-        '@nuxt/ui',
-        '@nuxt/content',
-        'nuxt-og-image',
-        'nuxt-llms'
-      ],
+    import { DynaLink } from '@dynalink/sdk';
 
-      css: ['~/assets/css/main.css']
-    })
-  filename: nuxt.config.ts
+    const dynalink = new DynaLink({
+      apiKey: 'your-api-key',
+      domain: 'your-domain.com'
+    });
+
+    const link = await dynalink.create({
+      url: 'https://yourapp.com/content',
+      title: 'Amazing Content',
+      analytics: true
+    });
+  filename: example.js
   ---
 
-  ```ts [nuxt.config.ts]
-  export default defineNuxtConfig({
-    modules: [
-      '@nuxt/ui',
-      '@nuxt/content',
-      'nuxt-og-image',
-      'nuxt-llms'
-    ],
+  ```js [example.js]
+  import { DynaLink } from '@dynalink/sdk';
 
-    css: ['~/assets/css/main.css']
-  })
+  const dynalink = new DynaLink({
+    apiKey: 'your-api-key',
+    domain: 'your-domain.com'
+  });
+
+  const link = await dynalink.create({
+    url: 'https://yourapp.com/content',
+    title: 'Amazing Content',
+    analytics: true
+  });
   ```
   :::
 ::
 
 ::u-page-section{class="dark:bg-neutral-950"}
 #title
-Powered by Nuxt UI components
+Why Choose DynaLink Over Firebase
 
 #links
   :::u-button
@@ -81,84 +84,84 @@ Powered by Nuxt UI components
   color: neutral
   size: lg
   target: _blank
-  to: https://ui.nuxt.com/docs/getting-started/installation/nuxt
+  to: /comparison
   trailingIcon: i-lucide-arrow-right
   variant: subtle
   ---
-  Explore Nuxt UI
+  Compare Features
   :::
 
 #features
   :::u-page-feature
   ---
-  icon: i-lucide-palette
+  icon: i-lucide-trending-up
   ---
   #title
-  100+ UI Components
+  Advanced Analytics
 
   #description
-  Access the complete Nuxt UI component library. From badges to modals, everything styled and accessible out of the box.
+  Get deeper insights into your link performance with comprehensive tracking, real-time reporting, and conversion analytics that Firebase simply can't match.
   :::
 
   :::u-page-feature
   ---
-  icon: i-lucide-type
+  icon: i-lucide-shield-check
   ---
   #title
-  Beautiful Typography
+  Enterprise Security
 
   #description
-  Pre-styled prose components with perfect visual harmony. No need for @tailwindcss/typography - get precise control over every element.
+  Bank-grade security with customizable access controls, encryption, and compliance features. Protect your links and your users' data.
   :::
 
   :::u-page-feature
   ---
-  icon: i-lucide-layers
+  icon: i-lucide-zap
   ---
   #title
-  Rich Prose Components
+  Lightning Fast
 
   #description
-  Accordions, cards, callouts, tabs, steps, code blocks, and more - all provided by Nuxt UI for interactive documentation.
+  Ultra-fast redirect times with global CDN distribution. Your users experience instant redirects without the delays of traditional services.
   :::
 
   :::u-page-feature
   ---
-  icon: i-lucide-search
+  icon: i-lucide-plug
   ---
   #title
-  Built-in Search
+  Seamless Integration
 
   #description
-  Full-text search with ContentSearch component. No need for Algolia - instant, relevant results with keyboard shortcuts (⌘K).
+  Easy integration with your existing tech stack through our comprehensive REST API and SDKs for all major platforms and frameworks.
   :::
 
   :::u-page-feature
   ---
-  icon: i-lucide-navigation
+  icon: i-lucide-bar-chart
   ---
   #title
-  Smart Navigation
+  Real-time Insights
 
   #description
-  Auto-generated navigation with ContentNavigation and ContentToc components. Sticky table of contents and prev/next links.
+  Monitor click-through rates, geographic distribution, device analytics, and conversion tracking in real-time with our powerful dashboard.
   :::
 
   :::u-page-feature
   ---
-  icon: i-lucide-moon
+  icon: i-lucide-settings
   ---
   #title
-  Dark Mode Ready
+  Customizable Controls
 
   #description
-  Automatic theme switching with smooth transitions. Respects system preferences and remembers user choice.
+  Full control over link behavior, expiration, access restrictions, and custom domains. Configure everything to match your brand and requirements.
   :::
 ::
 
 ::u-page-section{class="dark:bg-neutral-950"}
 #title
-Enhanced with Nuxt Content
+Trusted by Industry Leaders
 
 #links
   :::u-button
@@ -166,34 +169,56 @@ Enhanced with Nuxt Content
   color: neutral
   size: lg
   target: _blank
-  to: https://content.nuxt.com/docs/getting-started/installation
+  to: /case-studies
   trailingIcon: i-lucide-arrow-right
   variant: subtle
   ---
-  Explore Nuxt Content
+  Read Case Studies
   :::
 
 #features
   :::u-page-feature
   ---
-  icon: i-simple-icons-markdown
+  icon: i-lucide-rocket
   ---
   #title
-  MDC Enhanced Markdown
+  40% Higher CTR
 
   #description
-  Write in Markdown while embedding Vue components. Seamlessly integrate interactive elements in your content.
+  "The integration was seamless, and the support team was incredibly helpful. We've seen a 40% increase in click-through rates since switching."
   :::
 
   :::u-page-feature
   ---
-  icon: i-lucide-file-text
+  icon: i-lucide-star
   ---
   #title
-  File-based Routing
+  Superior Analytics
 
   #description
-  Organize content in folders and files. Your documentation structure automatically becomes your navigation.
+  "DynaLink has transformed how we handle our dynamic links. The analytics and security features are far superior to what we had with Firebase."
+  :::
+
+  :::u-page-feature
+  ---
+  icon: i-lucide-globe
+  ---
+  #title
+  Global Scale
+
+  #description
+  Handle millions of links with confidence. Our infrastructure scales automatically to meet your needs, from startup to enterprise.
+  :::
+
+  :::u-page-feature
+  ---
+  icon: i-lucide-headphones
+  ---
+  #title
+  24/7 Support
+
+  #description
+  Get expert help when you need it. Our support team provides dedicated assistance to ensure your success with DynaLink.
   :::
 
   :::u-page-feature
@@ -201,43 +226,21 @@ Enhanced with Nuxt Content
   icon: i-lucide-code
   ---
   #title
-  Syntax Highlighting
+  Developer First
 
   #description
-  Beautiful code blocks with language detection, line numbers, and copy buttons. Support for 100+ languages.
+  Built by developers, for developers. Comprehensive documentation, SDKs, and tools to integrate DynaLink into any workflow.
   :::
 
   :::u-page-feature
   ---
-  icon: i-lucide-database
+  icon: i-lucide-lock
   ---
   #title
-  Content Database
+  GDPR Compliant
 
   #description
-  Query your content with a MongoDB-like API. Filter, sort, and search through your documentation programmatically.
-  :::
-
-  :::u-page-feature
-  ---
-  icon: i-lucide-file-code
-  ---
-  #title
-  Frontmatter Support
-
-  #description
-  Add metadata to your content files. Define SEO tags, navigation properties, and custom fields.
-  :::
-
-  :::u-page-feature
-  ---
-  icon: i-lucide-git-branch
-  ---
-  #title
-  Version Control
-
-  #description
-  Content lives in your repository. Branch, review, and deploy documentation alongside your code.
+  Full compliance with GDPR, CCPA, and other privacy regulations. Your users' privacy is protected by design.
   :::
 ::
 
@@ -248,13 +251,13 @@ Enhanced with Nuxt Content
     - label: Start building
       to: '/getting-started'
       trailingIcon: i-lucide-arrow-right
-    - label: View on GitHub
-      to: 'https://github.com/nuxt-ui-templates/docs'
+    - label: View Documentation
+      to: '/docs'
       target: _blank
       variant: subtle
-      icon: i-simple-icons-github
-  title: Ready to build an amazing documentation?
-  description: Join thousands of developers building with Nuxt and Nuxt UI. Get this template and start shipping today.
+      icon: i-lucide-book-open
+  title: Ready to supercharge your dynamic links?
+  description: Join thousands of developers who have already switched to DynaLink. Experience superior performance, analytics, and security today.
   class: dark:bg-neutral-950
   ---
 
