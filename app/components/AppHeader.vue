@@ -21,17 +21,20 @@ const { header } = useAppConfig()
       v-if="header?.logo?.dark || header?.logo?.light || header?.title"
       #title
     >
-      <UColorModeImage
+     <div class="flex items-center pr-1">
+      <img
         v-if="header?.logo?.dark || header?.logo?.light"
-        :light="header?.logo?.light!"
-        :dark="header?.logo?.dark!"
-        :alt="header?.logo?.alt"
+        :src="$colorMode.value === 'dark' ? header?.logo?.dark : header?.logo?.light"
+        :alt="header?.logo?.alt || 'DynaLink Logo'"
         class="h-6 w-auto shrink-0"
       />
-
-      <span v-else-if="header?.title">
+     
+     </div>
+     <span >
         {{ header.title }}
       </span>
+
+     
     </template>
 
     <template
